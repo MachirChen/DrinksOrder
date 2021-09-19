@@ -80,9 +80,7 @@ class MenuCollectionViewController: UICollectionViewController {
         cell.drinkLabel.text = menuData.fields.name
         let imageUrl = menuData.fields.image[0].url
         MenuController.shared.fetchImage(url: imageUrl) { (image) in
-            guard let image = image else {
-                return
-            }
+            guard let image = image else { return }
             DispatchQueue.main.async {
                 cell.drinkImageView.image = image
             }

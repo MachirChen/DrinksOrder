@@ -41,9 +41,7 @@ class OrderTableViewController: UITableViewController {
         //抓圖
         let imageUrl = menuDatas.fields.image[0].url
         MenuController.shared.fetchImage(url: imageUrl) { (image) in
-            guard let image = image else {
-                return
-            }
+            guard let image = image else { return }
             DispatchQueue.main.async {
                 self.drinkImage.image = image
             }
