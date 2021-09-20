@@ -58,7 +58,7 @@ class OrderListTableViewController: UITableViewController {
         cell.orderNameLabel.text = orderDetail.fields.name
         cell.drinkNameLabel.text = orderDetail.fields.drink
         cell.tempLabel.text = orderDetail.fields.temperature
-        cell.sweetnessLabel.text = orderDetail.fields.temperature
+        cell.sweetnessLabel.text = orderDetail.fields.sweetness
         cell.countLabel.text = "\(orderDetail.fields.quantity)杯"
         cell.drinkPriceLabel.text = String(orderDetail.fields.price)
         if orderDetail.fields.toppings == "無" {

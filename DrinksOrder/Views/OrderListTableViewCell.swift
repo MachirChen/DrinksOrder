@@ -17,6 +17,9 @@ class OrderListTableViewCell: UITableViewCell {
     @IBOutlet weak var toppingsLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var drinkPriceLabel: UILabel!
+    
+    @IBOutlet weak var id: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

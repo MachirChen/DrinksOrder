@@ -62,13 +62,10 @@ class MenuController {
         let encoder = JSONEncoder()
         request.httpBody = try? encoder.encode(data)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let data = data,
-               let content = String(data: data, encoding: .utf8) {
+            if let data = data {
                 do {
-                    let decoder = JSONDecoder()
-                    let createUseResponse = try decoder.decode(OrderDetail.self, from: data)
+                    let content = String(data: data, encoding: .utf8)
                     print(content)
-                    print(createUseResponse)
                 } catch {
                     print(error)
                 }
